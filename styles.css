@@ -1,0 +1,280 @@
+/* styles.css */
+@font-face {
+	font-family: SanJiBangKaiJianTi;
+	src: url("./fonts/SanJiBangKaiJianTi-2.ttf");
+}
+
+@font-face {
+	font-family: "YEFONTZhaoPaiTi";
+	src: url("./fonts/YeZiGongChangZhaoPaiTi-2.ttf");
+}
+
+@font-face {
+	font-family: "5th Avenue";
+	src: url("./fonts/5thAvenue.ttf");
+}
+
+
+@font-face {
+	font-family: "UniSansHeavyCAPS";
+	src: url("./fonts/Uni\ Sans\ Heavy.otf");
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: SanJiBangKaiJianTi;
+    height: 100%;
+    background-color: white;
+    color: black;
+    overflow-x: hidden;
+
+}
+
+.container {
+    display: absolute;
+    flex-direction: column;
+    height: 100%;
+    padding: 30px 40px;
+    box-sizing: border-box;
+}
+
+
+
+
+header {	
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "5th Avenue";
+    font-size: 20px;
+}
+
+
+header a {
+    font-family: "YEFONTZhaoPaiTi";
+    margin-right: 50px;
+    text-decoration: none;
+    color: black;
+}
+
+nav a:last-child {
+    margin-right: 0;
+}
+
+.logo a {
+    font-family: "5th Avenue";
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: absolute;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative; /* 使 h1 绝对定位 */
+}
+
+h1 {
+    font-family: "YEFONTZhaoPaiTi";
+    font-weight: 1;
+    font-size: 10vw; /* 使用 viewport 单位来调整字体大小 */
+    line-height: 1;
+    letter-spacing: -0.05em; /* 调整字距 */
+    white-space: nowrap;
+    margin: 0;
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-48%, -50%); /* 使 h1 居中 */
+    z-index: 1;
+    background: linear-gradient(135deg, #ffe0e0, #fd6b6b); /* 定义渐变颜色 */
+    -webkit-background-clip: text; /* Chrome 和 Safari */
+    background-clip: text; /* 现代浏览器 */
+    -webkit-text-fill-color: transparent; /* 隐藏文字默认颜色，使背景颜色可见 */
+}
+
+
+/* for grid container */
+
+.grid-container-4fr {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 一行三个盒子 */
+    gap: 30px;
+    height: auto;
+}
+
+.grid-container-5fr {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 一行三个盒子 */
+    gap: 30px;
+    height: auto;
+}
+
+
+/* Ensure the container maintains a 1:1 aspect ratio */
+.grid-item {
+    position: relative;
+    width: 100%;
+    padding-top: 100%; /* This maintains the 1:1 aspect ratio */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    /* Add a background color if needed */
+    background-color: #f1f1f1;
+}
+
+.full-screen-image {
+    margin: 20px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+    filter: brightness(0.2); /* 调整亮度，0.7 表示变暗 */
+}
+
+.grid-item img {
+    position: absolute; /* Ensure the image covers the container */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* 半透明的灰色层 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+
+.main-text {
+    font-family: "YEFONTZhaoPaiTi";
+    font-size: 2.5em;
+    font-weight: 4;
+    margin-bottom: 10px;
+}
+
+.sub-text {
+    font-size: 1.2em;
+    font-weight: 2;
+}
+
+.txt-red {
+    color: red;
+}
+
+h2 {
+    font-family: "YEFONTZhaoPaiTi";
+    font-size: 50px;
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-top: 100px;
+    font-weight: 2;
+    background: linear-gradient(to right, #7c0d0d, #ac2222, #b84646); /* 定义渐变颜色 */
+    -webkit-background-clip: text; /* Chrome 和 Safari */
+    background-clip: text; /* 现代浏览器 */
+    -webkit-text-fill-color: transparent; /* 隐藏文字默认颜色，使背景颜色可见 */
+}
+
+.subtitle p {
+    letter-spacing: 3px;
+    font-family: "UniSansHeavyCAPS";
+    font-size: 3vw; /* 根据需要调整字体大小 */
+    background: linear-gradient(to right, #e6d85c, #e9dd75, #e4dc97); /* 定义渐变颜色 */
+    -webkit-background-clip: text; /* Chrome 和 Safari */
+    background-clip: text; /* 现代浏览器 */
+    -webkit-text-fill-color: transparent; /* 隐藏文字默认颜色，使背景颜色可见 */
+    position: relative;
+    top: 22.5%;
+    z-index: 1;
+    display: inline-block;
+}
+
+
+
+
+/* Add these styles to your CSS file */
+footer {
+    margin: 80px 0 10px 0;
+    background-color: #f1f1f1;
+    color: #1c1c1c ;
+    padding: 20px 40px;
+    text-align: center;
+    border-radius: 12px; /* 圆角 */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* 添加阴影效果，使其更有层次感 */
+}
+
+
+
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer p {
+    margin: 0;
+    font-family: "UniSansHeavyCAPS";
+    font-size: 18px; /* 字体稍微小一点 */
+    font-weight: 400; /* 通过减小字体粗细使其看起来更细 */
+    letter-spacing: 0.1em;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin: 0;
+}
+
+.social-icons a {
+    text-decoration: none;
+    width: 35px;
+    height: 35px;
+}
+
+.social-icons img {
+    width: 35px;
+    height: 35px;
+    /* 将图标颜色反转，使其适应深色背景 */
+    transition: transform 0.3s ease-in-out;
+    margin: 0;
+    justify-content: center;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2); /* 鼠标悬停时放大图标 */
+}
+
+.footer-spacer {
+    height: 5px; 
+}
+
+.footer-text p {
+    margin: 5px;
+    justify-content: center;
+}
+
+
+
